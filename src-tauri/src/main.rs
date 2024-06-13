@@ -34,7 +34,7 @@ fn main() {
         .setup(|app| {
             let app = app.app_handle().clone();
             async_runtime::spawn(async move {
-                if let Ok(url) = Url::parse("https://jp.apps.gree.net/ja/97") {
+                if let Ok(url) = Url::parse("https://www.google.co.jp") {
                     let window = WebviewWindowBuilder::new(&app, "main", WebviewUrl::External(url))
                         .initialization_script(SCRIPT)
                         .build()
